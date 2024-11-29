@@ -5,15 +5,15 @@ class AppTheme {
     brightness: Brightness.light,
     primaryColor: Colors.blue,
     hintColor: Colors.blueAccent,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       color: Colors.blue,
       iconTheme: IconThemeData(color: Colors.white),
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Colors.black),
       bodyMedium: TextStyle(color: Colors.black54),
     ),
-    cardTheme: CardTheme(
+    cardTheme: const CardTheme(
       color: Colors.white,
       elevation: 4,
     ),
@@ -23,11 +23,11 @@ class AppTheme {
     brightness: Brightness.dark,
     primaryColor: Colors.black,
     hintColor: Colors.teal,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       color: Colors.black,
       iconTheme: IconThemeData(color: Colors.white),
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Colors.white),
       bodyMedium: TextStyle(color: Colors.white54),
     ),

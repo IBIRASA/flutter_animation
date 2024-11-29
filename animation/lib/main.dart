@@ -3,10 +3,12 @@ import 'package:get/get.dart';
 import 'theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -35,6 +37,8 @@ class CatalogPage extends StatelessWidget {
         name: 'Headphones', imageUrl: 'assets/headphone.jpg', price: 199.99),
   ];
 
+  CatalogPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,8 +61,8 @@ class CatalogPage extends StatelessWidget {
         ],
       ),
       body: GridView.builder(
-        padding: EdgeInsets.all(16),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        padding: const EdgeInsets.all(16),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
@@ -71,12 +75,12 @@ class CatalogPage extends StatelessWidget {
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  title: Text('Product'),
+                  title: const Text('Product'),
                   content: Text(product.name),
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      child: Text('OK'),
+                      child: const Text('OK'),
                     ),
                   ],
                 ),
@@ -92,10 +96,11 @@ class CatalogPage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(height: 8),
-                  Text(product.name, style: TextStyle(fontSize: 16)),
-                  SizedBox(height: 4),
-                  Text('\$${product.price}', style: TextStyle(fontSize: 14)),
+                  const SizedBox(height: 8),
+                  Text(product.name, style: const TextStyle(fontSize: 16)),
+                  const SizedBox(height: 4),
+                  Text('\$${product.price}',
+                      style: const TextStyle(fontSize: 14)),
                 ],
               ),
             ),
